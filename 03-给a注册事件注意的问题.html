@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <a href="">点击在控制台打印嘿嘿嘿</a>
+
+  <script>
+    //1. 获取a
+    var link = document.getElementsByTagName('a')[0];
+    //2. 给a注册点击事件
+    link.onclick = function(){
+      console.log('嘿嘿嘿');
+      console.log(1);
+      
+      return false; //想要阻止a标签的默认行为,在事件处理函数的最后一行写return false
+     
+    }
+    
+    
+    //注册事件的小结:
+//    事件的三要素:
+//    事件源
+//    事件名
+//    事件处理函数
+    
+    //给a注册点击事件时,有默认行为,阻止默认行为的方式: retrun false
+    
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--<h1>这是H1的文本-->
+<!--</h1>-->
+<!--<div>-->
+  <!--这是div的文本-->
+  <!--<p>这是p标签的文本</p>-->
+<!--</div>-->
+<input type="text" value ="这是文本框的内容">
+<script>
+  
+  //    innerText
+  //    innerHTML
+  
+//  var div = document.getElementsByTagName('div')[0];
+  //  console.log(h1);
+  //  console.log(div.innerText); //只操作元素内的文本
+  //  console.log(div.innerHTML); //不仅可以操作文本,还可以操作标签
+  
+  //  div.innerText = '这是动态添加的<h1>我是h1</h1>';  //可以赋值,但是会覆盖原来的所有内容
+  //  div.innerHTML = '这是动态添加的<h1>我是h1</h1>';  //可以赋值,但是会覆盖原来的所有内容
+  
+  
+  //  小结:
+  //  不同点:
+  //  innerText 只操作文本
+  //  innerHTML 不仅操作文本,可以操作标签
+  
+  //  相同点: 都会覆盖原来的内容
+  
+  
+//  注意:
+//  innerText 和 innerHTML 主要用于双标签
+  
+  var input = document.getElementsByTagName('input')[0];
+  console.log(input.innerText);
+  console.log(input.innerHTML);
+  console.log(input.value);
+
+
+</script>
+
+</body>
+</html>

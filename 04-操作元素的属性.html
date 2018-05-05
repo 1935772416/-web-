@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="box">点击修改</div>
+
+  <script>
+    // 点击box, 修改id的值
+    //1. 获取元素
+    var box = document.getElementById('box');
+    //2. 注册事件
+    box.onclick = function(){
+      //3. 把box的值修改为one
+      box.id = 'one';
+//      console.log(box.id);
+//      console.log(document.getElementById('box')); //null
+//      console.log(document.getElementById('one')); //找到了
+    }
+    console.log(document.getElementById('box'));
+    console.log(document.getElementById('one'));
+    
+   
+    
+    
+  </script>
+</body>
+</html>

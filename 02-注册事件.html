@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  
+  </style>
+</head>
+<body>
+<div id="box"></div>
+<p>点击打印哈哈哈</p>
+
+<script>
+  //  //需求: 点击div打印一句话
+  //  //    1. 找到div
+  //  var box = document.getElementById('box');
+  //  //2. 注册事件
+  //  box.onclick = function(){
+  //    //当用户点击div的时候,就会调用这个函数,这行代码就可以执行
+  //    console.log('五一结束了.');
+  //  }
+  
+  //需求: 点击p元素,打印哈哈哈
+  //  1. 找到p元
+  var ps = document.getElementsByTagName('p');
+  console.log(ps); //返回的是伪数组
+  console.log(ps[0]); //拿到伪数组中我们需要的元素
+  //  2.  注册事件
+  ps[0].onclick = function () {
+    console.log('哈哈哈');
+  }
+  
+  //   事件的三要素:
+  //事件源: ps[0]  给谁注册事件,谁就是事件源
+  //事件名: click  注册的是什么时间,对应就是什么名字
+  //事件处理函数:  function(){console.log('哈哈哈');  触发事件时调用的函数就是事件处理函数
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+
+
+<a href="http://www.baidu.com" id="link">点击切换</a>
+<br>
+
+<img id="img" src="images/a.jpg" alt="图片" width="500" height="350">
+
+</body>
+</html>
+<script>
+  //需求: 点击a,改变图片
+  //  点击a元素,修改img的src
+  ////  1. 获取元素
+  var link = document.getElementById('link');
+  var img = document.getElementById('img');
+  var flag = true; //用于标记当前展示的是那张图
+  // 2. 给a注册点击事件
+      link.onclick = function(){
+        //    3. 在事件处理函数中修改img的src属性的值
+        //4. 当点击a的时候,先判断flag的值,如果是true,就修改成b.jpg.否则就是a.jpg
+        if(flag){
+          //从a到b
+          img.src = 'images/b.jpg';
+          flag = false;
+        }else{
+          //从b到a
+          img.src = 'images/a.jpg';
+          flag = true;
+        }
+        return false; //阻止a的默认行为
+      }
+  
+  //不能使用src.img判断, 他返回的是绝对路径
+//  link.onclick = function () {
+//    //    3. 在事件处理函数中修改img的src属性的值
+//    //4. 当点击a的时候,先判断flag的值,如果是true,就修改成b.jpg.否则就是a.jpg
+//    console.log(img.src)
+//    if (img.src == 'images/a.jpg') {
+//      //从a到b
+//      img.src = 'images/b.jpg';
+////      flag = false;
+//    } else {
+//      //从b到a
+//      img.src = 'images/a.jpg';
+////      flag = true;
+//    }
+//    return false; //阻止a的默认行为
+//  }
+
+
+</script>
+
